@@ -47,7 +47,6 @@ class PolicyServer(object):
     @contextmanager
     def params(self, h):
         param_list = dict(pair for pair in self._sess_params(h))
-        print param_list
         if param_list == dict():
             yield None
         else:

@@ -9,7 +9,12 @@ import asyncore
 
 from posthook import response
 
-class SMTPServer(smtpd.SMTPServer):
+
+class SMTPServer(smtpd.SMTPServer, object):
+
+    def __init__(self, address='0.0.0.0', port=6054, workers=1000):
+        super(SMTPServer, self).__init__((address, port), None)
+        # Disregard workers, instanciate SMTPServer
 
     def run(self):
         # TODO catch errors
