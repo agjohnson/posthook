@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='posthook',
     version='0.1',
-    description='Postfix asynchronous smtphooks',
+    description='SMTP hooks via SMTPServer and Postfix policy server',
     author='Anthony Johnson',
     author_email='aj@ohess.org',
     packages=['posthook'],
