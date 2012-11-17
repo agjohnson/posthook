@@ -7,7 +7,7 @@ setup(
     description='SMTP hooks via SMTPServer and Postfix policy server',
     author='Anthony Johnson',
     author_email='aj@ohess.org',
-    packages=['posthook'],
+    packages=['posthook', 'posthook.provider', 'posthook.tests'],
     install_requires=[
         'gevent'
     ],

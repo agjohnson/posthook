@@ -28,6 +28,7 @@ class SMTPServer(smtpd.SMTPServer, object):
                 'sender': mailfrom,
                 'recipient': rcpt,
                 'client_address': peer,
+                'data': data
             })
             action = '450'
             if isinstance(res, response.Dunno):
@@ -58,6 +59,7 @@ class SMTPServer(smtpd.SMTPServer, object):
                 return '{action}'.format(action)
 
     def recv(self, params):
+        '''Received connection, process SMTP parameters'''
         return response.Dunno()
 
 class BadAction(Exception):
